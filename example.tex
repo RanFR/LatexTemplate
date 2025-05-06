@@ -1,0 +1,118 @@
+\documentclass{ranfr}
+
+
+\title{ranfr.cls模板使用示例}
+\author{RanFR}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    在这个示例教程中，我们将演示如何使用ranfr.cls模板来创建一个简单的中文文档。这个文档包括数学公式、表格、图片、列表、代码和参考文献等内容。
+\end{abstract}
+
+\section{数学公式示例}
+
+这是几个数学公式示例：
+
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+\begin{equation}
+    \int_0^1 x^2 \, dx = \frac{1}{3}
+\end{equation}
+
+\section{表格示例}
+
+这是一个表格示例：
+
+\begin{table}[h]
+    \centering
+    \caption{一个表格}
+    \begin{tabularx}{\textwidth}{
+            | >{\raggedright\arraybackslash}X
+            | >{\centering\arraybackslash}X
+            | >{\raggedleft\arraybackslash}X
+            |}
+        \hline
+        项目 & 数量 & 单价 \\
+        \hline
+        A  & 5  & 20 \\
+        \hline
+        B  & 3  & 25 \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\section{图片示例}
+
+这是一张图片示例：
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{pictures/example.png}
+    \caption{一张图片}
+\end{figure}
+
+\section{列表示例}
+\subsection{有序列表}
+这是一个有序列表示例：
+\begin{enumerate}
+    \item 列表项 1
+    \item 列表项 2
+    \item 列表项 3
+          \begin{enumerate}
+              \item 子列表项 1
+              \item 子列表项 2
+          \end{enumerate}
+\end{enumerate}
+
+\subsection{无序列表}
+
+这是一个无序列表示例：
+
+\begin{itemize}
+    \item 列表项 1
+    \item 列表项 2
+    \item 列表项 3
+          \begin{itemize}
+              \item 子列表项 1
+              \item 子列表项 2
+          \end{itemize}
+\end{itemize}
+
+\section{代码示例}
+
+这是一个Python代码示例：
+
+\begin{minted}{python}
+    def hello_world():
+        print("Hello, World!")
+
+    hello_world()
+\end{minted}
+
+\section{伪代码示例}
+
+这是一个简单的算法伪代码示例：
+
+\begin{algorithm}[H]
+    \caption{计算斐波那契数列的第n项}
+    \KwIn{正整数$n$}
+    \KwOut{第$n$项斐波那契数列的值}
+    \SetKwProg{Fn}{Function}{\string:}{end}
+    \Fn{Fibonacci($n$)}{
+        \If{$n=1$ or $n=2$}{
+            \Return 1;
+        }
+        $F_1\leftarrow 1$; $F_2\leftarrow 1$;
+        \For{$i\leftarrow 3$ \KwTo $n$}{
+            $F_i\leftarrow F_{i-1} + F_{i-2}$;
+        }
+        \Return $F_n$;
+    }
+\end{algorithm}
+
+\end{document}
