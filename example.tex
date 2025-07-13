@@ -1,6 +1,5 @@
 \documentclass{ranfr}
 
-
 \title{ranfr.cls模板使用示例}
 \author{RanFR}
 \date{\today}
@@ -37,24 +36,14 @@
             | >{\raggedleft\arraybackslash}X
             |}
         \hline
-        项目 & 数量 & 单价 \\
+        项目（左） & 数量（中） & 单价（右） \\
         \hline
-        A  & 5  & 20 \\
+        A          & 5          & 20         \\
         \hline
-        B  & 3  & 25 \\
+        B          & 3          & 25         \\
         \hline
     \end{tabularx}
 \end{table}
-
-\section{图片示例}
-
-这是一张图片示例：
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.6\textwidth]{pictures/example.png}
-    \caption{一张图片}
-\end{figure}
 
 \section{列表示例}
 \subsection{有序列表}
@@ -82,6 +71,16 @@
               \item 子列表项 2
           \end{itemize}
 \end{itemize}
+
+\section{图片示例}
+
+这是一张图片示例：
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{pictures/example.png}
+    \caption{一张图片}
+\end{figure}
 
 \section{代码示例}
 

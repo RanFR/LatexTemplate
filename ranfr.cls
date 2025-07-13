@@ -1,10 +1,11 @@
 % Basic LaTeX class file for RanFR's Report Template
 \LoadClass{article}
-\NeedsTeXFormat{LaTeX2e}[2024/11/01]
-\ProvidesClass{ranfr}[2025/05/06 v0.1 RanFR's Report Template.]
+\NeedsTeXFormat{LaTeX2e}[2020/02/02]
+\ProvidesClass{ranfr}[2025/05/06 v0.2.0 RanFR's Report Template.]
 
 % Chinese support
 \RequirePackage[UTF8, heading = true]{ctex}
+
 
 % Page layout and margins
 \RequirePackage[a4paper, left=3.18cm, right=3.18cm, top=2.54cm, bottom=2.54cm]{geometry}
