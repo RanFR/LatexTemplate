@@ -1,10 +1,10 @@
-# VSCode工作区配置文件
+# VS Code配置
 .vscode/
 
-# LaTex编译过程文件
+# Latex构建中生成的文件
 *.aux
 *.log
 *.synctex.gz
 
-# minted创建的文件夹
+# minted生成的文件夹
 _minted-example/
