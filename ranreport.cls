@@ -87,6 +87,11 @@
 \RequirePackage{graphicx}      % 图片插入和处理
 \RequirePackage{tabularx}      % 扩展表格功能
 \RequirePackage{threeparttable} % 三部分表格（表头、表体、表注）
+\RequirePackage{multirow}      % 表格跨行合并单元格
+\RequirePackage{multicol}      % 多栏环境支持
+\RequirePackage{booktabs}      % 专业表格线样式
+\RequirePackage{makecell}      % 单元格内多行内容显示
+\RequirePackage{gensymb}       % 通用符号包（度数符号等）
 
 % 图表标题格式设置 - 使用空格而不是冒号分隔
 \captionsetup{

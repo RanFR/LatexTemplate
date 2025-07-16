@@ -26,11 +26,35 @@
 
 \section{表格示例}
 
-这是一个表格示例：
+\subsection{简单表格示例}
+
+\subsubsection{基本表格}
+
+这是一个简单表格示例，使用tabular包，见表\ref{tab:basic_tabular_table}。
+
+\begin{table}[htbp]
+    \centering
+    \caption{简单表格示例}
+    \label{tab:basic_tabular_table}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        项目 & 数量 & 单价 \\
+        \hline
+        A    & 5    & 20   \\
+        B    & 3    & 25   \\
+        C    & 8    & 15   \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{自适应基本表格}
+
+这是一个自适应基本表格示例，使用tabularx包，见表\ref{tab:basic_tabularx_table}。
 
 \begin{table}[h]
     \centering
     \caption{一个表格}
+    \label{tab:basic_tabularx_table}
     \begin{tabularx}{\textwidth}{
             | >{\raggedright\arraybackslash}X
             | >{\centering\arraybackslash}X
@@ -44,6 +68,44 @@
         B          & 3          & 25         \\
         \hline
     \end{tabularx}
+\end{table}
+
+\subsection{多行合并表格示例}
+
+这是一个多行表格示例。
+
+\begin{table}[htbp]
+    \centering
+    \caption{多行合并表格示例}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        项目                    & 数值1 & 数值2 \\
+        \hline
+        \multirow{2}{*}{合并行} & 10    & 20    \\
+        \cline{2-3}
+                                & 30    & 40    \\
+        \hline
+        \makecell{多行内容                      \\第二行} & 50 & 60 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{多列合并表格示例}
+
+这是一个多列合并表格示例。
+
+\begin{table}[htbp]
+    \centering
+    \caption{多列合并表格示例}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \multicolumn{2}{|c|}{项目} & 数值1 & 数值2      \\
+        \hline
+        \multirow{2}{*}{项目a}     & 属性a & 10    & 20 \\
+        \cline{2-4}
+                                   & 属性b & 30    & 40 \\
+        \hline
+    \end{tabular}
 \end{table}
 
 \section{列表示例}
@@ -114,5 +176,13 @@
         \Return $F_n$;
     }
 \end{algorithm}
+
+\section{符号示例}
+
+由\text{gensymb}包提供的符号示例：
+
+温度：25\degree C
+
+欧姆：53 \ohm
 
 \end{document}
