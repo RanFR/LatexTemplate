@@ -2,11 +2,17 @@
 % 基于 article 类构建，适用于中文学术文档
 \LoadClass{article}
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
-\ProvidesClass{ranreport}[2025/07/16 v0.2.2 RanFR's Report Template.]
+\ProvidesClass{ranreport}[2025/07/16 v0.3.0 RanFR's Report Template.]
+
+% 类选项定义
+\newif\if@ranreport@times\@ranreport@timesfalse  % Times New Roman 字体选项
+\DeclareOption{times}{\@ranreport@timestrue}      % 启用 Times New Roman
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}  % 传递其他选项给 article 类
+\ProcessOptions\relax  % 处理选项
 
 % 中文支持配置
 % UTF8 编码，启用中文标题格式
-\RequirePackage[UTF8, heading = true]{ctex}
+\RequirePackage[UTF8, heading = true, fontset=none]{ctex}
 
 % 页面布局和边距设置
 % A4 纸张，左右边距 3.18cm，上下边距 2.54cm
@@ -31,6 +37,26 @@
 % 字体配置
 % 使用 fontspec 宏包进行字体管理，设置基础字体大小为 12pt
 \RequirePackage{fontspec}
+
+% 英文字体设置 - 根据 times 选项选择
+\if@ranreport@times
+    % 使用 Times New Roman 系列字体
+    \setmainfont{Times New Roman}           % 正文字体
+    \setsansfont{Arial}                     % 无衬线字体
+    \setmonofont{Courier New}               % 等宽字体
+\else
+    % 使用 TexLive 自带的开源字体
+    \setmainfont{TeX Gyre Termes}           % Times 的开源替代
+    \setsansfont{TeX Gyre Heros}            % Helvetica 的开源替代
+    \setmonofont{TeX Gyre Cursor}           % Courier 的开源替代
+\fi
+
+% 中文字体设置 - 统一使用 Noto 字体系列
+\setCJKmainfont{Noto Serif SC}              % 中文正文字体（衬线）
+\setCJKsansfont{Noto Sans SC}               % 中文无衬线字体
+\setCJKmonofont{Maple Mono NF CN}      % 中文等宽字体
+
+% 设置基础字体大小
 \fontsize{12pt}{\baselineskip}\selectfont
 
 % 编号和计数器控制
