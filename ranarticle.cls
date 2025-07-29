@@ -1,11 +1,10 @@
 % RanFR 的基础 LaTeX 模板文件
 % 基于 article 类构建，适用于中文学术文档
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
-\ProvidesClass{ranarticle}[2025/07/29 v0.3.1 RanFR's Latex Template.]
+\ProvidesClass{ranarticle}[2025/07/29 v0.3.2 RanFR's Latex Template]
 \LoadClass{article}
 
-% 中文支持配置
-% UTF8 编码，启用中文标题格式
+% 中文支持配置，启用 UTF8 编码和中文标题格式
 \RequirePackage[UTF8, heading = true]{ctex}
 
 % 页面布局和边距设置
@@ -17,16 +16,11 @@
 
 % 节标题格式定义
 % 使用大号粗体，编号与标题间距 1em
-\titleformat{\section}
-    {\normalfont\Large\bfseries}
-    {\thesection}{1em}{}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
 
 % 摘要标题格式设置 - 与节标题保持一致
-% 重新定义摘要名称和环境，使其与节标题具有相同样式
+% 定义摘要中文名称和环境，使其与节标题具有相同样式
 \renewcommand{\abstractname}{\Large\bfseries 摘要}
-
-% 字体配置，使用 fontspec 宏包进行字体管理
-\RequirePackage{fontspec}
 
 % 数学公式支持
 \RequirePackage{amsmath}    % 基础数学环境和命令
