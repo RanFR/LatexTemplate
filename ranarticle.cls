@@ -1,7 +1,7 @@
 % RanFR 的基础 LaTeX 模板文件
 % 基于 article 类构建，适用于中文学术文档
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
-\ProvidesClass{ranarticle}[2025/07/29 v0.3.2 RanFR's Latex Template]
+\ProvidesClass{ranarticle}[2025/07/29 v0.3.3 RanFR's Latex Template]
 \LoadClass{article}
 
 % 中文支持配置，启用 UTF8 编码和中文标题格式
@@ -38,7 +38,8 @@
 \pagestyle{fancy}              % 应用自定义页面样式
 
 % 代码和算法支持
-\RequirePackage{minted}                              % 代码语法高亮
+% 配置 minted 包，缓存和输出都放在 build 文件夹中
+\RequirePackage[cache=true, cachedir=_minted, outputdir=build]{minted}     % 代码语法高亮，启用缓存并设置缓存和输出目录
 \RequirePackage[ruled, linesnumbered]{algorithm2e}   % 算法环境，带边框和行号
 
 % 图片和表格支持
