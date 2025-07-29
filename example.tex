@@ -1,6 +1,6 @@
-\documentclass[]{ranreport} % 添加times选项使用 Times New Roman 字体
+\documentclass{ranarticle}
 
-\title{ranreport.cls模板使用示例}
+\title{ranarticle.cls模板使用示例}
 \author{RanFR}
 \date{\today}
 
@@ -9,7 +9,7 @@
 \maketitle
 
 \begin{abstract}
-    在这个示例教程中，我们将演示如何使用ranreport.cls模板来创建一个简单的中文文档。这个文档包括数学公式、表格、图片、列表、代码和参考文献等内容。
+    在这个示例教程中，我们将演示如何使用ranarticle.cls模板来创建一个简单的中文文档。这个文档包括数学公式、表格、图片、列表、代码和参考文献等内容。
 \end{abstract}
 
 \section{数学公式示例}
@@ -51,7 +51,7 @@
 
 这是一个自适应基本表格示例，使用tabularx包，见表\ref{tab:basic_tabularx_table}。
 
-\begin{table}[h]
+\begin{table}[htbp]
     \centering
     \caption{一个表格}
     \label{tab:basic_tabularx_table}
