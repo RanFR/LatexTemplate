@@ -1,7 +1,7 @@
 % RanFR 的基础 LaTeX 模板文件
 % 基于 article 类构建，适用于中文学术文档
-\NeedsTeXFormat{LaTeX2e}[2020/02/02]
-\ProvidesClass{ranarticle}[2025/07/29 v0.3.3 RanFR's Latex Template]
+\NeedsTeXFormat{LaTeX2e}[2024/11/01]
+\ProvidesClass{ranarticle}[2025/07/30 v1.0.0 RanFR's Latex Template]
 \LoadClass{article}
 
 % 中文支持配置，启用 UTF8 编码和中文标题格式
@@ -38,26 +38,25 @@
 \pagestyle{fancy}              % 应用自定义页面样式
 
 % 代码和算法支持
-% 配置 minted 包，缓存和输出都放在 build 文件夹中
-\RequirePackage[cache=true, cachedir=_minted, outputdir=build]{minted}     % 代码语法高亮，启用缓存并设置缓存和输出目录
-\RequirePackage[ruled, linesnumbered]{algorithm2e}   % 算法环境，带边框和行号
+\RequirePackage{minted}                            % 代码语法高亮
+\RequirePackage[ruled, linesnumbered]{algorithm2e} % 算法环境，带边框和行号
 
 % 图片和表格支持
-\RequirePackage{caption}       % 图表标题格式控制
-\RequirePackage{graphicx}      % 图片插入和处理
-\RequirePackage{tabularx}      % 扩展表格功能
+\RequirePackage{caption}        % 图表标题格式控制
+\RequirePackage{graphicx}       % 图片插入和处理
+\RequirePackage{tabularx}       % 扩展表格功能
 \RequirePackage{threeparttable} % 三部分表格（表头、表体、表注）
-\RequirePackage{multirow}      % 表格跨行合并单元格
-\RequirePackage{multicol}      % 多栏环境支持
-\RequirePackage{booktabs}      % 专业表格线样式
-\RequirePackage{makecell}      % 单元格内多行内容显示
-\RequirePackage{gensymb}       % 通用符号包（度数符号等）
+\RequirePackage{multirow}       % 表格跨行合并单元格
+\RequirePackage{multicol}       % 多栏环境支持
+\RequirePackage{booktabs}       % 专业表格线样式
+\RequirePackage{makecell}       % 单元格内多行内容显示
+\RequirePackage{gensymb}        % 通用符号包（度数符号等）
 
-% 图表标题格式设置 - 使用空格而不是冒号分隔
+% 图表标题格式设置
 \captionsetup{
-    labelsep=space,    % 标签与标题之间使用空格分隔
-    font=small,        % 标题字体大小
-    labelfont=bf       % 标签使用粗体
+    labelsep=space, % 标签与标题之间使用空格分隔
+    font=small,     % 标题字体大小
+    labelfont=bf    % 标签使用粗体
 }
 
 % 图表按节编号，格式为"节号.图表号"
@@ -65,3 +64,6 @@
 \numberwithin{table}{section}
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
 \renewcommand{\thetable}{\thesection.\arabic{table}}
+
+% 超链接支持
+\RequirePackage{hyperref}

@@ -10,7 +10,13 @@
 
 ## 须知
 
-目前编译的`minted`缓存会生成到`build`文件夹中。
+### minted
+
+在 TexLive2024+版本中，minted 包可以自行检测 pyg 文件的位置，不需要设置`outputdir`参数。如果使用 2023 以及以下的 TexLive 版本，需要在 cls 文件中，将 minted 配置以下内容即可正常编译。
+
+```
+\RequirePackage[outputdir=build]{minted}
+```
 
 ## 致谢
 
