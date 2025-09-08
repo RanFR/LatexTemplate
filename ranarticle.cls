@@ -67,3 +67,6 @@
 
 % 超链接支持
 \RequirePackage{hyperref}
+
+% 参考文献支持
+\RequirePackage[backend=biber, style=numeric, sorting=nty]{biblatex}
