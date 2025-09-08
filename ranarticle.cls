@@ -38,7 +38,7 @@
 \pagestyle{fancy}              % 应用自定义页面样式
 
 % 代码和算法支持
-\RequirePackage{minted}                            % 代码语法高亮
+\RequirePackage{listings}                          % 代码高亮显示
 \RequirePackage[ruled, linesnumbered]{algorithm2e} % 算法环境，带边框和行号
 
 % 图片和表格支持
